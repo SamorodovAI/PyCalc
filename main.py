@@ -22,6 +22,12 @@ class app(Frame):
         self.pack(expand=YES, fill=BOTH)
         self.master.title('Calculator')
 
+    display = StringVar()
+    Entry(self, relief=RIDGE, textvariable=display,
+          justify='right'
+          , bd=30, bg="powder blue").pack(side=TOP,
+                                          expand=YES, fill=BOTH)
+
 
 # Start the GUI
 if __name__ == '__main__':
