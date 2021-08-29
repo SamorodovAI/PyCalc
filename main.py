@@ -28,6 +28,12 @@ class app(Frame):
           , bd=30, bg="powder blue").pack(side=TOP,
                                           expand=YES, fill=BOTH)
 
+    for clearButton in (["C"]):
+        erase = iCalc(self, TOP)
+        for ichar in clearButton:
+            button(erase, LEFT, ichar, lambda
+                storeObj=display, q=ichar: storeObj.set(''))
+
 
 # Start the GUI
 if __name__ == '__main__':
